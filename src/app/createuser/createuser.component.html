@@ -1,0 +1,17 @@
+<p> Add user </p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>
+    firstname:
+    <input type="text" formControlName="firstname">
+  </label>
+  <br>
+  <label>
+    lastname:
+    <input type="text" formControlName="lastname">
+  </label> <br>
+  <button class="button" (click)="onSubmit()" >Submit</button>
+</form>
+
+<div *ngIf="Success == true">
+    <h5>Add user success</h5>
+  </div>

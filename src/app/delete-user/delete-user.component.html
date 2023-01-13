@@ -1,0 +1,9 @@
+<div>
+
+    <h1>La liste des utilisateurs</h1>
+    <ul *ngFor="let list of ListUser; let i=index">
+        <li>{{i+1}} {{list.firstname}} - {{list.lastname}} 
+        <span> <button (click)="delete(list.id)" >remove</button></span></li>
+    </ul>
+
+</div>

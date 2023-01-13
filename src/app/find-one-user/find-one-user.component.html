@@ -1,0 +1,19 @@
+<p> Find an user </p>
+<div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label>
+            id:
+            <input type="text" formControlName="id">
+        </label>
+        <button class="button" type="submit" (click)="onSubmit()" >Submit</button>
+    </form>
+</div>
+
+<div *ngIf="User">
+    <h1 class="fw-bold text-primary m-0">L'utilisateurs</h1>
+    <ul class="list-group">
+        <li class="list-group-item">Prenom: {{User.firstname}}</li>
+        <li class="list-group-item">Nom: {{User.lastname}}</li>
+        <li class="list-group-item">Date de la creation {{User.createdAt | date : "dd MMMM y HH:mm:ss"}}</li>
+    </ul>
+</div>
