@@ -11,7 +11,9 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { FindOneUserComponent } from './find-one-user/find-one-user.component';
 import { FindAllUserComponent } from './find-all-user/find-all-user.component';
 import { CreateuserComponent } from './createuser/createuser.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,10 @@ import { CreateuserComponent } from './createuser/createuser.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
-<p> update user </p>
+
  
-<form [formGroup]="form" (ngSubmit)="Update()">
+<!-- <form [formGroup]="form" (ngSubmit)="Update()">
   
   <label>
     id:
@@ -21,4 +21,40 @@
 
 <div *ngIf="success == true">
     <h5> update user success</h5>
+</div>-->
+
+<div class="login-wrappe" fxLayout="row" fxLayoutAlign="center center">
+    <div class="main">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title style="color: darkblue;font-size: 50px; margin-left: 0%;" >update user</mat-card-title><br><br><br><br>
+        </mat-card-header>
+        <form [formGroup]="form" (ngSubmit)="Update()">
+            <fieldset>
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">id</label>
+                    <input type="text"formControlName="id" class="form-control" placeholder="id">
+                </div>
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">firstname</label>
+                    <input type="text"formControlName="firstname" class="form-control" placeholder="firstname">
+                </div>
+                <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">lastname</label>
+                    <input type="text" formControlName="lastname" class="form-control" placeholder="lastname">
+                </div><br><br>
+                <div class="d-grid gap-2">
+                    <button type="submit" (click)="Update()" class="btn btn-primary block">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+        <mat-card class="box" *ngIf="success == true">
+            <mat-card-title style="color: green">Add user success</mat-card-title>
+        </mat-card>
+    </mat-card>
+    </div>
 </div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+

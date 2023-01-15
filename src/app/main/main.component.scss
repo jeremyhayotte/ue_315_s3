@@ -1,0 +1,56 @@
+.main {
+    height: 80vh;
+    font-size: 20px;
+    font-family: lato; 
+    transition: margin-left .4s;
+
+    padding: 0 10px 0 20px;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #98A6B7;
+}
+a {
+    color: darkblue;
+}
+ul, li {
+    font-family: 'Times New Roman', Times, serif;
+}
+ul, li, mat-icon {
+    font-size: 30px;
+}
+
+.login-wrapper .example-form {
+    min-width: 100%;
+    max-width: 300px;
+    width: 100%;
+  }
+.login-wrapper {
+    height: 100%;
+    background-color: #22242B;
+
+  }
+  .login-wrappe {
+    background-color: #22242B;
+
+  }
+
+.box {
+position: relative;
+  top: 0;
+  opacity: 1;
+  //float: left;
+  padding: 60px 50px 40px 50px;
+  width: 100%;
+  background: #98A6B7;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  //max-width: 800px;
+  height: 90vh;
+  margin-top: 10px;
+}

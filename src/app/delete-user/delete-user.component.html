@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
 
     <h1>La liste des utilisateurs</h1>
     <ul *ngFor="let list of ListUser; let i=index">
@@ -6,4 +6,27 @@
         <span> <button (click)="delete(list.id)" >remove</button></span></li>
     </ul>
 
+</div> -->
+
+
+<div class="login-wrappe" fxLayout="row" fxLayoutAlign="center center">
+    <div class="main">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title style="color: darkblue;font-size: 50px; margin-left: 0%;" >La liste des utilisateurs</mat-card-title><br><br><br><br>
+        </mat-card-header>
+        <ul class="list-group list-group" *ngFor="let list of ListUser; let i=index">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{list.firstname}}   Lastname: {{list.lastname}}</div>
+                </div>
+                <span class="badge bg-primary rounded-pill" (click)="delete(list.id)">delete</span><br><br>
+            </li>
+        </ul>
+    </mat-card>
+    </div>
 </div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
