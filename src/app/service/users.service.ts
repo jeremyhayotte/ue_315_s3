@@ -1,13 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { User } from "../user/user.component"
 
+import { createConnection, getMongoManager, getMongoRepository } from "typeorm";
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsersService {
     private apiurl = 'http://192.168.33.10:3000/api';
+
+
+  createConnection({
+    type = "mongodb",
+    url = process.env['MONGODB_CONNECTION'],
+    useNewUrlParser = true,
+    useUnifiedTopoly = true,
+    synchronize = true,
+    logging = true,
+    entities: [User],
+  })
     
 
   constructor(private http: HttpClient, private router:Router) { 

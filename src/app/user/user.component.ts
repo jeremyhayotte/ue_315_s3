@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ObjectId } from 'mongodb';
+import { Entity, ObjectIdColumn, Column } from 'typeorm';
 import { UsersService } from '../service/users.service';
 
 
@@ -7,6 +9,30 @@ import { UsersService } from '../service/users.service';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
+
+@Entity()
+export class User {
+    @ObjectIdColumn()
+    _id: ObjectId | undefined;
+
+    @Column()
+    firstname: string | undefined;
+
+    @Column()
+    lastname: string | undefined;
+
+
+    constructor(
+        firstname: string,
+        lastname: string
+    ) {
+        this._id = new ObjectId();
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+}
+
+
 
 export class UserComponent implements OnInit{
    

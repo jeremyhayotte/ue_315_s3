@@ -1,3 +1,7 @@
+
+
+
+
 .main {
     height: 80vh;
     font-size: 20px;
@@ -34,6 +38,7 @@ ul, li, mat-icon {
   }
   .login-wrappe {
     background-color: #22242B;
+    height : 100%;
 
   }
 
@@ -53,4 +58,10 @@ position: relative;
   //max-width: 800px;
   height: 90vh;
   margin-top: 10px;
+}
+
+@media (max-width: 400px) {
+    .test {margin : 0 auto; padding-right: 10%; padding-left: 10%;}
+
+    .mat-mdc-card-header {margin : 0 auto; padding-right: 10%; padding-left: 10%;}
 }
